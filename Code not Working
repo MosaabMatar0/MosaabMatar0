@@ -1,0 +1,30 @@
+I am new to coding So Here I am trying to reverse a String without using Reverse method
+(Java)
+That is the Code Down Bellow it is Giving "Index 2 out of bounds for length 2" Error at Line 18
+Shall I add a Try and Catch :
+
+import java.util.Scanner;
+
+class Programm{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter a String ");
+    String exString = scanner.nextLine();
+    
+    long exInteger = exString.chars().count();
+
+    char[] exList;
+    exList = exString.toCharArray();
+
+    char[] exListSave = exList;
+
+    for(int i = 0; i < exInteger; i ++){
+      exList[i] = exListSave[(int) exInteger - i];
+    }
+
+    System.out.println(exList);
+
+    scanner.close();
+  }
+}
